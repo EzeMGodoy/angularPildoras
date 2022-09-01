@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h1 class="text-center">{{ title }}</h1>
+  <form action="">
+    Numero 1:
+    <input type="number" [(ngModel)]="numero1" name="numero1" /><br /><br />
+    Numero 2:
+    <input type="number" [(ngModel)]="numero2" name="numero2" /><br /><br />
+
+    <div class="container-input">
+      <input type="submit" value="Sumar" (click)="sumar()" />
+      <input
+        type="submit"
+        value="Restar"
+        (click)="restar()"
+        class="btn btn-primary"
+      />
+      <input type="submit" value="Multiplicar" (click)="multiplicar()" />
+      <input type="submit" value="Dividir" (click)="dividir()" />
+    </div>
+  </form>
+
+  <p class="mt-2">
+    El resultado de {{ nombreFactor }} {{ numero1 }} {{ simboloFactor }}
+    {{ numero2 }} es: {{ resultado }}
+  </p>
+</div>
+<br />
+<br />
+<br />
+
+<app-new-user></app-new-user>
+<br />
+<app-empleado></app-empleado>
+<br />
