@@ -2,9 +2,11 @@
   <div class="row">
     <div class="col">
       <div>
-        {{ indice + 1 }}: {{ empleadoDeLista.nombre }}
-        {{ empleadoDeLista.apellido }} - {{ empleadoDeLista.cargo }} - Salario:
-        ${{ empleadoDeLista.salario }}
+        <a [routerLink]="['actualiza', indice]">
+          {{ indice + 1 }}: {{ empleadoDeLista.nombre }}
+          {{ empleadoDeLista.apellido }} - {{ empleadoDeLista.cargo }} -
+          Salario: ${{ empleadoDeLista.salario }}
+        </a>
       </div>
       <ul style="list-style: none">
         <li *ngFor="let caracteristica of arrayCaracteristicas">
@@ -17,3 +19,8 @@
     </div>
   </div>
 </div>
+
+<!-- LINEA 5: Agregué [routerLink] para que el link me lleve a la ruta que setie en app.module.ts.
+    Ademas le paso el indice para que lo lleve a la ruta "actualiza".
+    Luego en app.module.ts, preparo al path para que reciba id -> { path: 'actualiza/:id', component: ActualizaComponentComponent }
+-->

@@ -1,0 +1,9 @@
+.containerCalculadora {
+  border: 1px solid blue;
+  background-color: khaki;
+}
+
+.container-input {
+  display: flex;
+  gap: 5px;
+}
